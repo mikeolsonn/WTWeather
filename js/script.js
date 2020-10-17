@@ -1,7 +1,8 @@
 // Constants and variables
-let weatherData, userInput;
-const API_KEY = 'd2995b380b6b9d5daf6ee3c221b46906';
-const BASE_URL =  'https://api.openweathermap.org/data/2.5/weather?'
+let weatherData, input;
+const API_KEY = CONFIG.weatherAPIKey;
+//TODO
+const BASE_URL =  'https://proxify-app1.herokuapp.com/api';
 
 // Cached Element References
 const $city = $('#city');
@@ -24,11 +25,11 @@ function handleGetData(event) {
 
     event.preventDefault();
 
-    userInput = $input.val();
+    input = $input.val();
 
-    if(!userInput) return;
-
-    $.ajax(BASE_URL + 'q=' + userInput + '&appid=' + API_KEY + '&q=Boston&units=imperial') //  <-- last part converts to degrees F
+    if(!input) return;
+//TODO need to update so request is made to proxy server
+    $.ajax(BASE_URL + '?city=' + input) //  <-- last part converts to degrees F
     .then(function(data) {
 
         
@@ -88,3 +89,16 @@ __proto__: Object
 //     <p>Description: ${weatherData.weather[0].description}</p>
 // </article>
 // `;
+
+// const weatherDetailUI = weatherData.Search.map(function(weather){
+//     return `
+//     <article>
+//         <h3>${weatherData.name}</h3>
+//         <p>Temperature: ${weatherData.main.temp}</p>
+//         <p>Feels Like: ${weatherData.main.feels_like}</p>
+//         <p>Description: ${weatherData.weather[0].description}</p>
+//     </article>
+//     `;
+// });
+// $main.html(weatherDetailUI);
+// }

@@ -1,0 +1,59 @@
+:root {
+    --primary-color: #ecf7ff;
+    --accent-color: #6ab1dd 
+}
+
+* {
+    box-sizing: border box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    font-family: Helvetica;
+}
+
+main {
+    width: 75%;
+    flex-grow: 1;
+}
+header {
+    background-color: var(--accent-color);
+    height: 65px;
+    width: 100%;
+    box-shadow: 1px 1px 15px 1px gray;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--accent-color);
+    height: 50px;
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+.flex-ctr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+}
+
+.outline {
+    border: 1px dotted red;
+}
+
+.weather{
+    text-transform: capitalize;
+
+    height: 50px;
+}
+

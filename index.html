@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script defer src="./js/config.js"></script> 
+
+
     <script defer src="./js/script.js"></script>
+    
     <title>Weather App</title>
 </head>
-<body>
-    <main>
-        <h1>Weather App</h1>
-        <p id="city"></p>
-        <p id="temp"></p>
-        <p id="index"></p>
-        <p id="desc"></p>
+<body class="flex-ctr">
+    <header class="flex-ctr">
+        <h1>WeatherFi</h1>
+    </header>
+    <main class="flex-ctr outline">
+        <h3 class="weather" id="city"></h3>
+        <p class="weather" id="temp"></p>
+        <p class="weather" id="index"></p>
+        <p class="weather" id="desc"></p>
+        <form class="outline">
+            <input type="text" placeholder="Search By City">
+            <input type="submit" value="Search">
+        </form>
     </main>
-    <form>
-        <input type="text" placeholder="Search By City">
-        <input type="submit" value="Search">
-    </form>
+    <footer class="flex-ctr">
+        <p>Copyright &copy; 2020 WeatherApp All Rights Reserved</p>
+    </footer>
 </body>
 </html>
