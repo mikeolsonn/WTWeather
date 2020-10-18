@@ -17,6 +17,7 @@ body {
 main {
     width: 75%;
     flex-grow: 1;
+
 }
 header {
     background-color: var(--accent-color);
@@ -47,11 +48,9 @@ form {
     display: flex;
 }
 
-.outline {
-    border: 1px dotted red;
-}
 
-.weather{
+
+.weather {
     text-transform: capitalize;
 
     height: 50px;

@@ -31,11 +31,12 @@ function handleGetData(event) {
 //TODO need to update so request is made to proxy server
     $.ajax(BASE_URL + '?city=' + input) //  <-- last part converts to degrees F
     .then(function(data) {
-
+        
         
         weatherData = data;
         render();
 
+        console.log(data);
 
     }, function(error) {
         console.log('Error', error);
@@ -47,7 +48,7 @@ function render() {
     $city.text(weatherData.name);
     $temp.text('Temperature: ' + weatherData.main.temp);
     $index.text('Feels Like: ' + weatherData.main.feels_like);
-    $desc.text('Description: ' + weatherData.weather[0].description);
+    $desc.text(weatherData.weather[0].description);
 }
 
 
